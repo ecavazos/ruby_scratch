@@ -23,4 +23,9 @@ describe 'Seconds' do
     minutes = 61
     (minutes/60).to_i.must_equal 1
   end
+
+  it 'should give minutes remaining after extracting the hours' do
+    minutes = 66
+    (minutes%60).to_i.must_equal 6
+  end
 end
