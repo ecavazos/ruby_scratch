@@ -5,7 +5,6 @@ task :default => :test
 
 desc 'Run all tests.'
 Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
   t.pattern = '*_test.rb'
 end
 

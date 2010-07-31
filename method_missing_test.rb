@@ -1,4 +1,4 @@
-class Foo
+class Missing
   def method_missing(method_name, *args, &block)
     method_name = method_name.to_s
 
@@ -24,7 +24,7 @@ class Foo
   end
 end
 
-foo = Foo.new
-foo.secret
-foo.hi "world"
-foo.hi "to you"
+missing = Missing.new
+missing.secret
+missing.hi "world"
+missing.hi "to you"
