@@ -1,0 +1,17 @@
+= Ruby Scratch
+
+Ruby scratch is my ruby sketch book.  It's a collection of tests that I put
+together to flesh out ideas, test assumptions and help me remember
+useful ruby idioms.
+
+== Background
+
+Normally, I would hack together some code in IRB or write throw away test
+code.  And many times, hours or days later, I would regret not keeping my
+chicken scratch around for reference.  After doing that enough, I decided
+to make my scratch into a real project.  I figured it would make a good
+resource for the future me or anyone else that might be interested.
+
+== Copyright
+
+Copyright (c) 2010 Emilio Cavazos
