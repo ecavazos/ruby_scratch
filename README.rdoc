@@ -2,7 +2,7 @@
 
 Ruby scratch is my ruby sketch book.  It's a collection of tests that I put
 together to flesh out ideas, test assumptions and help me remember
-useful ruby idioms.
+useful ruby idioms.  It's code with the tests inline; kind of handy ;)
 
 == Background
 
