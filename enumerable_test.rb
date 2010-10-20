@@ -1,5 +1,4 @@
-require 'minitest/spec'
-MiniTest::Unit.autorun
+require File.expand_path('../test_helper', __FILE__)
 
 describe 'Enumerable' do
 

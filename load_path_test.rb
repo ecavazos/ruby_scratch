@@ -1,7 +1,5 @@
-require 'minitest/spec'
+require File.expand_path('../test_helper', __FILE__)
 require 'pathname'
-
-MiniTest::Unit.autorun
 
 describe 'Load path stuff' do
 

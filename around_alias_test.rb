@@ -1,13 +1,14 @@
-require 'minitest/spec'
-MiniTest::Unit.autorun
-
-class Greeter
-  def greet
-    'Hello!'
-  end
-end
+require File.expand_path('../test_helper', __FILE__)
 
 describe 'Around alias' do
+
+  before do
+    class Greeter
+      def greet
+        'Hello!'
+      end
+    end
+  end
 
   it 'should be able to call original greet method' do
     Greeter.new.greet.must_equal 'Hello!'

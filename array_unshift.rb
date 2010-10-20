@@ -1,5 +1,4 @@
-require 'minitest/spec'
-MiniTest::Unit.autorun
+require File.expand_path('../test_helper', __FILE__)
 
 describe "Array's unshift method" do
   it "should put element at beginning of array" do

@@ -1,38 +1,37 @@
-require 'minitest/spec'
-MiniTest::Unit.autorun
-
-class Missing
-
-  def method_missing_hook; end
-
-  def method_missing(method_name, *args, &block)
-    method_name = method_name.to_s
-
-    if self.class.private_method_defined?(method_name)
-      return "#{method_name}() is a private method!"
-    end
-
-    # define method
-    self.class.class_eval do
-      define_method(method_name) do |msg|
-        "Hello #{msg}"
-      end
-    end
-
-    method_missing_hook
-
-    # call new method
-    self.send(method_name, *args, &block)
-
-  end
-
-  private
-  def password
-  end
-end
+require File.expand_path('../test_helper', __FILE__)
 
 describe 'Method missing' do
   before do
+    class Missing
+
+      def method_missing_hook; end
+
+      def method_missing(method_name, *args, &block)
+        method_name = method_name.to_s
+
+        if self.class.private_method_defined?(method_name)
+          return "#{method_name}() is a private method!"
+        end
+
+        # define method
+        self.class.class_eval do
+          define_method(method_name) do |msg|
+            "Hello #{msg}"
+          end
+        end
+
+        method_missing_hook
+
+        # call new method
+        self.send(method_name, *args, &block)
+
+      end
+
+      private
+      def password
+      end
+    end
+
     @mm = Missing.new
   end
 

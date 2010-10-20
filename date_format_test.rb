@@ -1,7 +1,5 @@
-require 'minitest/spec'
+require File.expand_path('../test_helper', __FILE__)
 require 'date'
-
-MiniTest::Unit.autorun
 
 describe 'Date' do
   it 'should format date (yyyymmdd)' do
