@@ -1,25 +1,22 @@
-require 'minitest/spec'
 require File.expand_path('../test_helper', __FILE__)
 
-MiniTest::Unit.autorun
-
-clean(:foo)
-
-class Foo
-  def initialize
-    @bar = 'bar'
-  end
-
-  def get_bar
-    @bar
-  end
-
-  def set_bar(val)
-    @bar = val
-  end
-end
-
 describe 'Class variables' do
+
+  before do
+    class Foo
+      def initialize
+        @bar = 'bar'
+      end
+
+      def get_bar
+        @bar
+      end
+
+      def set_bar(val)
+        @bar = val
+      end
+    end
+  end
 
   it 'should not allow access to @bar directly' do
     foo = Foo.new

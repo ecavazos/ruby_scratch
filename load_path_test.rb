@@ -10,6 +10,10 @@ describe 'Load path stuff' do
     $LOAD_PATH.delete(@path)
   end
 
+  it 'should haz alias' do
+    $LOAD_PATH.must_equal $:
+  end
+
   it 'should return file name' do
     __FILE__.must_equal 'load_path_test.rb'
   end

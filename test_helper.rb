@@ -1,8 +1,10 @@
+require 'minitest/spec'
 
-def clean(class_name)
-  klass = Kernel.const_get(class_name.to_s.capitalize) rescue NameError; return
+MiniTest::Unit.autorun
 
-  klass.instance_methods(false) do |m|
-    klass.class_eval { undef m }
+def clean(const)
+  const = const.to_sym.capitalize
+  if self.class.const_defined?(const)
+    self.class.send(:remove_const, const)
   end
 end

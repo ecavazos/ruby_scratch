@@ -8,6 +8,7 @@ class Greeter
 end
 
 describe 'Around alias' do
+
   it 'should be able to call original greet method' do
     Greeter.new.greet.must_equal 'Hello!'
   end
